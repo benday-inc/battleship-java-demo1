@@ -25,6 +25,8 @@
 	"extensions": [
 		"vscjava.vscode-java-pack"
 	],
+	"postCreateCommand": "npm install",
+	"forwardPorts": [4000],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
