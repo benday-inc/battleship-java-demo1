@@ -9,7 +9,7 @@ ARG INSTALL_MAVEN="true"
 ARG MAVEN_VERSION="3.6.3"
 # [Option] Install Gradle
 ARG INSTALL_GRADLE="true"
-ARG GRADLE_VERSION=""
+ARG GRADLE_VERSION="5.4.1"
 RUN if [ "${INSTALL_MAVEN}" = "true" ]; then su vscode -c "umask 0002 && . /usr/local/sdkman/bin/sdkman-init.sh && sdk install maven \"${MAVEN_VERSION}\""; fi \
     && if [ "${INSTALL_GRADLE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/local/sdkman/bin/sdkman-init.sh && sdk install gradle \"${GRADLE_VERSION}\""; fi
 
